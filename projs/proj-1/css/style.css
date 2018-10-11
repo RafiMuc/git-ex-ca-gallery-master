@@ -1,0 +1,110 @@
+h1{
+    position: absolute;
+    top: 10px;
+    left: 120px;
+}
+
+.board{
+    position: absolute;
+    table-layout: fixed;
+    text-decoration: blue;
+    left: 100px;
+    top: 120px;
+    background-color: rgb(204, 195, 195);
+    font-family: calibri;
+    font-size: 24px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 2px;
+}
+
+.board td {
+    width: 40px;
+    height: 40px;
+    transition: .5s;
+    border: 1px solid black;
+    text-align: center;
+    background-color: grey;
+}
+
+.game-time{
+    position: absolute;
+    top: 80px;
+    left: 100px;
+    text-align: right;
+    font: bold;
+    color: rgba(221, 34, 9, 0.863);
+    font-family: calibri;
+    font-size: 24px;
+}
+
+.smiley{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 80px;
+    left: 200px;
+    text-align: right;
+    font-size: 10px;
+}
+
+.unmarked-mines{
+    position: absolute;
+    top: 80px;
+    left: 350px;
+    text-align: right;
+    font-size: 24px;
+    color: rgba(221, 34, 9, 0.863);
+}
+
+.flag{
+    color: chartreuse;
+}
+
+.btn-beginner{
+    position: absolute;
+    width: 100px;
+    top: 480px;
+    left: 50px;
+    background-color: lightgray;
+}
+
+.btn-medium{
+    position: absolute;
+    width: 100px;
+    top: 510px;
+    left: 50px;
+    background-color: lightgray;
+}
+
+.btn-expert{
+    position: absolute;
+    width: 100px;
+    top: 540px;
+    left: 50px;
+    background-color: lightgray;
+}
+
+.best-beginner{
+    position: absolute;
+    width: 250px;
+    top: 480px;
+    left: 200px;
+    color: gray;
+}
+
+.best-medium{
+    position: absolute;
+    width: 250px;
+    top: 510px;
+    left: 200px;
+    color: gray;
+}
+
+.best-expert{
+    position: absolute;
+    width: 250px;
+    top: 540px;
+    left: 200px;
+    color: gray;
+}

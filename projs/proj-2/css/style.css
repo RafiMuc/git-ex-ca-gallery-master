@@ -1,0 +1,42 @@
+body {
+    background-color: black;
+    color: white
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    text-align: center
+}
+
+.cell img {
+    width: 25px;
+    height: auto
+}
+
+.floor {
+    background-color: gray
+}
+
+.wall {
+    background-color: brown
+}
+
+.collected-balls {
+    position: absolute;
+    left: 50px;
+    width: 250px;
+    height: 30px;
+    font-size: 24px;
+    text-align: left;
+    text-indent: 10px;
+    color: black;
+    background-color: #d6d8d9;
+    border-color: #c6c8ca;
+}
+
+.btn {
+    position: absolute;
+    top: 550px;
+    left: 400px;
+}
