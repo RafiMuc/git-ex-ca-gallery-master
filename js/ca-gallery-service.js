@@ -30,3 +30,9 @@ function getProjById(id) {
         return proj.id === id;
     })
 }
+
+function sendEmail(address, subject, body){
+    var hostName = `https://mail.google.com/mail/?view=cm&fs=1&to=
+    ${address}&su=${subject}&body=${body}`;
+    window.open(hostName, '_blank');
+}

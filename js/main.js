@@ -14,7 +14,7 @@ function renderProjs() {
     var strHtmls = projs.map(function (proj) {
         return `
         <div class="col-md-4 col-sm-6 portfolio-item">
-          <a id="link-${proj.id}" class="portfolio-link" data-toggle="modal" onClick="renderProjModal('${proj.id}')">
+          <a id="link-${proj.id}" class="portfolio-link" href="#proj-modal" data-toggle="modal" onClick="renderProjModal('${proj.id}')">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
                 <i class="fa fa-plus fa-3x"></i>
@@ -39,8 +39,24 @@ function renderProjModal(id) {
     $('#modal-proj-desc').text(proj.desc);
     $('#modal-published-at').text('Date: ' + proj.publishedAt);
     $('#modal-proj-labels').text('Category: ' + proj.labels);
-    $('#link-' + id).attr('href', '#proj-modal');
-    $('#link-' + id).click();
-    $('#proj-modal').show();
-    $('#link-' + id).attr('href', '');
+    $('#modal-play-game-link').attr('href', proj.url);
+}
+
+function onSendEmail() {
+    openCanvas();
+    var emailAddress = $('#email-address').val();
+    var emailSubject = $('#email-subject').val();
+    var emailBody = $('#email-body').val();
+    console.log('address',emailAddress); 
+    console.log('address',emailSubject); 
+    console.log('address',emailBody); 
+    $('#email-address').val('');
+    $('#email-subject').val('');
+    $('#email-body').val('');
+    setTimeout(function(){
+        var hostName = `https://mail.google.com/mail/?view=cm&fs=1&to=
+        ${emailAddress}&su=${emailSubject}&body=${emailBody}`;
+        window.open(hostName, '_blank');
+    },500);
+    
 }
