@@ -20,7 +20,7 @@ function renderProjs() {
                 <i class="fa fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/portfolio/${proj.id}.svg" alt="">
+            <img class="img-fluid" src="img/portfolio/${proj.id}.png" alt="">
           </a>
           <div class="portfolio-caption">
             <h4>${proj.title}</h4>
@@ -35,7 +35,7 @@ function renderProjModal(id) {
     var proj = getProjById(id);
     $('#modal-proj-name').text(proj.name);
     $('#modal-proj-title').text(proj.title);
-    $('#modal-proj-url').text(proj.url);
+    $('#modal-proj-url').attr('src',`img/portfolio/${id}.png`);
     $('#modal-proj-desc').text(proj.desc);
     $('#modal-published-at').text('Date: ' + proj.publishedAt);
     $('#modal-proj-labels').text('Category: ' + proj.labels);
