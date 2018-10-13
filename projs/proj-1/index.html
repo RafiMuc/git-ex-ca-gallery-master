@@ -8,26 +8,27 @@
 </head>
 
 <body onload="initGame()">
-    <h1>Minesweeper Game</h1>
-    <div class="game-time"></div>
-    <div ><img id="smiley" class="smiley" src="img/sunglasses.png" alt="Smiley"></div>
-    <div class="unmarked-mines"></div>
+    <div class="container">
+        <h1>Minesweeper Game</h1>
+        <div class="game-time"></div>
+        <div><img id="smiley" class="smiley" src="img/sunglasses.png" alt="Smiley"></div>
+        <div class="unmarked-mines"></div>
 
-    <table>
-        <tbody class="board"></tbody>
-    </table>
+        <table>
+            <tbody class="board"></tbody>
+        </table>
 
-    <button id="beginner" class="btn-beginner" onclick="setLevel(this)" style="background-color: aqua" >Beginner</button>
-    <button id="medium" class="btn-medium" onclick="setLevel(this)">Medium</button>
-    <button id="expert" class="btn-expert" onclick="setLevel(this)">Expert</button>
+        <button id="beginner" class="btn-beginner" onclick="setLevel(this)" style="background-color: aqua">Beginner</button>
+        <button id="medium" class="btn-medium" onclick="setLevel(this)">Medium</button>
+        <button id="expert" class="btn-expert" onclick="setLevel(this)">Expert</button>
 
-    <div id="best-beginner" class="best-beginner">Best score: </div>
-    <div id="best-medium" class="best-medium" >Best score: </div>
-    <div id="best-expert" class="best-expert" >Best score: </div>
+        <div id="best-beginner" class="best-beginner">Best score: </div>
+        <div id="best-medium" class="best-medium">Best score: </div>
+        <div id="best-expert" class="best-expert">Best score: </div>
 
-    <script src="js/utils.js"></script>
-    <script src="js/game.js"></script>
-
+        <script src="js/utils.js"></script>
+        <script src="js/game.js"></script>
+    </div>
 </body>
 
 </html>

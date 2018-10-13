@@ -1,0 +1,63 @@
+h1, h2 {
+    color: rgb(0, 128, 105);
+    position: absolute;
+    text-align: left;
+    left: 50px;
+    font-family: calibri;
+}
+
+h1 {
+    top: 5px;
+    border-bottom-style: solid
+}
+
+h2 {
+    top: 60px;
+}
+
+.board {
+    background-color: rgb(73, 196, 173);
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    top: 120px;
+    left: 50px;
+}
+
+div img {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    width: 180px;
+    height: 225px;
+}
+
+.quest-pic img {
+    position: absolute;
+    top: 160px;
+    left: 300px;
+    width: 300px;
+    height: 190px;
+    border-radius: 5px;
+}
+
+.box {
+    background-color: rgb(9, 115, 105);
+    color: rgb(172, 201, 195);
+    font-family: calibri;
+    font-size: 24px;
+    padding: 10px;
+    position: absolute;
+    left: 96px;
+    width: 500px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.quest1 {
+    top: 390px;
+}
+
+.quest2 {
+    top: 450px;
+}

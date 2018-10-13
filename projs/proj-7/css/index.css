@@ -1,0 +1,13 @@
+h1 {
+    padding: 10px;
+    text-align: center
+}
+
+.new-book{
+    color: rgb(38, 38, 128);
+    font-weight: bold;
+}
+
+.num {
+    text-align: right;
+}
