@@ -7,6 +7,7 @@ function init() {
 
 function renderBooks() {
     var books = getBooks();
+    
     var strHtmls = books.map(function (book) {
         return `
         <tr>
@@ -14,9 +15,9 @@ function renderBooks() {
             <td ><img src="${book.img}" alt="pic" width="170px" height="200px" ></td>
             <td >${book.title}</td>
             <td class="num">${book.price}</td>
-            <td><button type="button" class="btn btn-primary" onclick="onReadBook(${book.id})">Read</button></td>
-            <td><button type="button" class="btn btn-warning" onclick="readAndAddNewBook(${book.id})">Update</button></td>
-            <td><button type="button" class="btn btn-danger" onclick="onDeleteBook(${book.id})">Delete</button></td>
+            <td><button type="button" class="btn btn-primary" onclick="onReadBook(${book.id})">${getTrans('readBtn')}</button></td>
+            <td><button type="button" class="btn btn-warning" onclick="readAndAddNewBook(${book.id})">${getTrans('updateBtn')}</button></td>
+            <td><button type="button" class="btn btn-danger" onclick="onDeleteBook(${book.id})">${getTrans('deleteBtn')}</button></td>
           </tr>
           `
     });
@@ -32,14 +33,14 @@ function readAndAddNewBook(bookId) {
     var $newBookEl = $('#read-and-add-new-book');
     if (bookId) {
         var book = getBookById(bookId);
-        $('#book-modal').text('Update Book');
+        $('#book-modal').text(getTrans('modalUpdate'));
         $('#book-title').val(book.title).prop('disabled', true);
         $('#book-price').val(book.price).prop('disabled', false);
         $('#book-img-div').hide();
         $('#update-btn').data('id', bookId);
     }
     else {
-        $('#book-modal').text('Add New Book');
+        $('#book-modal').text(getTrans('modalAdd'));
         $('#book-title').val('').prop('disabled', false);
         $('#book-price').val('').prop('disabled', false);
         $('#book-img').val('');
@@ -71,7 +72,7 @@ function onUpdateBook() {
 function onReadBook(bookId) {
     var $newBookEl = $('#read-and-add-new-book');
     var book = getBookById(bookId);
-    $('#book-modal').text('Book Details');
+    $('#book-modal').text(getTrans('modalRead'));
     $('#book-title').val(book.title).prop('disabled', true);
     $('#book-price').val(book.price).prop('disabled', true);
     $('#book-img-div').hide();
@@ -97,3 +98,8 @@ function onHigherRate(){
 $("#main-form").submit(function (e) {
     e.preventDefault();
 });
+
+function onSetLang(lang) {
+    setLang(lang);
+    renderBooks();
+}

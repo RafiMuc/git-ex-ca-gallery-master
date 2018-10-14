@@ -11,3 +11,15 @@ h1 {
 .num {
     text-align: right;
 }
+
+body.rtl {
+    direction: rtl;
+}
+
+.right-align {
+    text-align: right;
+}
+.modal-header .close {
+    padding: 1rem;
+    margin: -1rem -1rem -1rem ;
+}
